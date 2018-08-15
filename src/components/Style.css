@@ -1,7 +1,41 @@
+div.contact-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/contact-form-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    position: fixed;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 div.form-container {
+    max-width: 500px;
+    color: white;
     margin: 16px;
+    padding: 32px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: white;
+}
+div.form-container h3 {
+    margin: 0;
 }
 div.form-container input, textarea {
     margin-top: 16px;
     font-size: 16px;
+}
+
+div.form-container input[type=submit] {
+    -webkit-appearance: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 4px;
+    width: 100px;
+    height: auto;
 }

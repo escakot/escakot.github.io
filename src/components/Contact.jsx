@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Textarea from 'react-textarea-autosize';
 import './Style.css';
 
 class Contact extends Component {
@@ -23,16 +24,20 @@ class Contact extends Component {
 
     render() {
         return(
-            <div className="form-container">
-                <h2>Hi there, thank you for using one of my apps. You can reach me through the contact form below. Feel free to send me any feedback, report bugs, or suggestions.</h2>
-                <form style={{display: "flex", flexDirection: "column"}} method="POST" action="https://formspree.io/techsonate+support@gmail.com">
-                    <input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
-                    <input type="email" name="email" placeholder="Email" />
-                    <input type="text" name="_subject" placeholder="Subject (App Name)" />
-                    <input type="hidden" name="_gotcha" style={{display:"none"}} />
-                    <textarea name="message" placeholder="Your message" />
-                    <input type="submit" value="Submit" style={{alignSelf: "center"}}/>
-                </form>
+            <div className="contact-container">
+                <div className="form-container">
+                    <h3>Hi there, thank you for using one of my apps. You can reach me through the contact form below. Feel free to send me any feedback, report bugs, or suggestions.</h3>
+                    <br/>
+                    <form style={{display: "flex", flexDirection: "column"}} method="POST" action="https://formspree.io/techsonate+support@gmail.com">
+                        <input required type="text" name="name" placeholder="Name" onChange={this.handleChange} />
+                        <input required type="email" name="email" placeholder="Email" />
+                        <input required type="text" name="_subject" placeholder="Subject (App Name)" />
+                        <input type="hidden" name="_gotcha" style={{display:"none"}} />
+                        <Textarea required name="message" placeholder="Your message" />
+                        <br/>
+                        <input type="submit" value="Submit" style={{alignSelf: "center"}}/>
+                    </form>
+                </div>
             </div>
         )
     }
