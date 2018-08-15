@@ -25,7 +25,7 @@ class Contact extends Component {
         return(
             <div className="form-container">
                 <h2>Hi there, thank you for using one of my apps. You can reach me through the contact form below. Feel free to send me any feedback, report bugs, or suggestions.</h2>
-                <form style={{display: "flex", flexDirection: "column"}} method="POST" action="https://formspree.io/escakot@gmail.com">
+                <form style={{display: "flex", flexDirection: "column"}} method="POST" action="https://formspree.io/techsonate+support@gmail.com">
                     <input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
                     <input type="email" name="email" placeholder="Email" />
                     <input type="text" name="_subject" placeholder="Subject (App Name)" />
